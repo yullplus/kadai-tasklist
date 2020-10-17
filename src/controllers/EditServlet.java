@@ -44,7 +44,7 @@ public class EditServlet extends HttpServlet {
 
         // メッセージIDをセッションスコープに登録
         if(t != null) {
-        request.getSession().setAttribute("message_id", t.getId());
+        request.getSession().setAttribute("task_id", t.getId());
         }
         RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/messages/edit.jsp");
         rd.forward(request, response);
